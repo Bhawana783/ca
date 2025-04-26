@@ -6,6 +6,10 @@ const app = express() ;
 
 const PORT = 9090 ;
 
+app.get('/', (req,res)=>{
+    res.json('This is Home Route')
+})
+
 app.post("/sendData" , async(req , res)=>{
     try{
         const {Email , Password} = req.body ;
